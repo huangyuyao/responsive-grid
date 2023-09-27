@@ -172,6 +172,17 @@ first div in the grid  and place it in the grid. */
         .method { grid-row: 3; }
         .clients { grid-row: 4; }
         .contact { grid-row: 5; }
+      
+        .about-image, .method-image, .clients-image, .contact-image {
+          grid-column: 1 / -1; /* Cover all of the columns */
+          max-height: 600px;
+          overflow: hidden; /* Hide any content that goes outside their grid cell */
+        }
+        
+        .about-image { grid-row: 2; }
+        .method-image { grid-row: 3; }
+        .clients-image { grid-row: 4; }
+        .contact-image { grid-row: 5; }
       }
 
 
