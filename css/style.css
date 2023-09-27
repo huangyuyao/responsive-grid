@@ -144,6 +144,10 @@ nav a:hover, nav a:focus {
 
 /* Step 4: Write selector/rule property to style the container */
 
+img{
+  width: 100%;
+}
+
 @media (max-width: 799px) {
   .container {
     display: grid;
@@ -160,7 +164,7 @@ first div in the grid  and place it in the grid. */
   .container > :first-child {
     grid-column: span 3;
     min-height: 500px;
-    background-image: url('header.jpg');
+    background-image: url("../images/header.jpg");
     background-attachment: fixed;
   }
 }
@@ -172,24 +176,25 @@ first div in the grid  and place it in the grid. */
 
       @media (max-width: 799px) {
         .about, .method, .clients, .contact {
-          grid-column: 2;
+          grid-column-start: 2;
+          grid-column-end: span 1;
         }
       
-        .about { grid-row: 2; }
-        .method { grid-row: 3; }
-        .clients { grid-row: 4; }
-        .contact { grid-row: 5; }
+        .about { grid-row-start: 2; }
+        .method { grid-row-start: 3; }
+        .clients { grid-row-start: 4; }
+        .contact { grid-row-start: 5; }
       
         .about-image, .method-image, .clients-image, .contact-image {
-          grid-column: 1 / -1; /* Cover all of the columns */
+          grid-column: 1 / span 3; 
           max-height: 600px;
           overflow: hidden; 
         }
         
-        .about-image { grid-row: 2; }
-        .method-image { grid-row: 3; }
-        .clients-image { grid-row: 4; }
-        .contact-image { grid-row: 5; }
+        .about-image { grid-row-start: 2; }
+        .method-image { grid-row-start: 3; }
+        .clients-image { grid-row-start: 4; }
+        .contact-image { grid-row-start: 5; }
       }
 
 
@@ -201,7 +206,7 @@ first div in the grid  and place it in the grid. */
   align-items: center;
   justify-content: center;
   max-height: 250px;
-  overflow: auto;
+  overflow: scroll;
   text-align: center;
 }
 
@@ -241,7 +246,6 @@ first div in the grid  and place it in the grid. */
     }
   }
   
-  /* For all images covering all columns with specified maximum height */
   @media (max-width: 799px) {
     .about-image, .method-image, .clients-image, .contact-image {
       grid-column: 1 / span 3;
