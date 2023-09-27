@@ -20,6 +20,14 @@ body{
   height: 400px;                /* Parallax effect */
 }
 
+@media (max-width: 799px) {
+  .overview {
+    background-image: url('header.jpg');
+    background-attachment: fixed;
+    grid-column: span 3;
+    min-height: 500px;
+  }
+}
 
 .overview p{
   color: white;
@@ -131,9 +139,8 @@ nav a:hover, nav a:focus {
 /* Step 3: Write selector/rule property to style all elements when in focus*/
 
 *:focus {
-  border: 2px solid;
+  border: 2px solid #000;
 }
-
 
 /* Step 4: Write selector/rule property to style the container */
 
@@ -176,7 +183,7 @@ first div in the grid  and place it in the grid. */
         .about-image, .method-image, .clients-image, .contact-image {
           grid-column: 1 / -1; /* Cover all of the columns */
           max-height: 600px;
-          overflow: hidden; /* Hide any content that goes outside their grid cell */
+          overflow: hidden; 
         }
         
         .about-image { grid-row: 2; }
