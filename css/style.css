@@ -117,10 +117,7 @@ nav a:hover, nav  a:focus {
 
 .skip a {
   position: absolute;
-  top: -40px;
-  left: 0;
-  padding: 6px;
-  z-index: 1;
+  top: 40px;
 }
 
 
