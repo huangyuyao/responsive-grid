@@ -20,14 +20,6 @@ body{
   height: 400px;                /* Parallax effect */
 }
 
-@media (max-width: 799px) {
-  .overview {
-    background-image: url('header.jpg');
-    background-attachment: fixed;
-    grid-column: span 3;
-    min-height: 500px;
-  }
-}
 
 .overview p{
   color: white;
