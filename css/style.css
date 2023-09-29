@@ -200,12 +200,9 @@ first div in the grid  and place it in the grid. */
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 
  .text-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
   max-height: 250px;
-  overflow: auto;
-  text-align: center;
+  overflow: scroll;
 }
 
 
